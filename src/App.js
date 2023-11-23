@@ -1,9 +1,22 @@
+import React, { useState } from "react";
 import "./App.css";
-import TodoList from "./ToDoList/todolist";
+import { Login } from "./LoginPage/Login";
+import { Register } from "./LoginPage/Register";
+
 function App() {
+  const [currnerForm, setCurrentForm] = useState("login");
+
+  const toggleForm = (forName) => {
+    setCurrentForm(forName);
+  };
+
   return (
     <div className="App">
-      <TodoList />
+      {currnerForm === "login" ? (
+        <Login onFormSwitch={toggleForm} />
+      ) : (
+        <Register onFormSwitch={toggleForm} />
+      )}
     </div>
   );
 }
