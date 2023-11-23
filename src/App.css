@@ -1,3 +1,40 @@
 .App {
   text-align: center;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://foni.club/uploads/posts/2023-01/1672659212_foni-club-p-oboi-4k-1.jpg);
+}
+
+/* linear-gradient(79deg, rgb(99, 177, 189), rgb(110, 193, 228) 48%, rgb(124, 177, 204)); */
+.auth-form-container,
+.login-form,
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  text-align: left;
+  padding: 0.25rem 0;
+}
+
+input {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+}
+
+button {
+  border: none;
+  background-color: rgb(79, 79, 176);
+  padding: 20px;
+  border-radius: 10px;
+}
+.link-btn {
+  background: none;
+  color: white;
+  text-decoration: underline;
 }
