@@ -23,19 +23,32 @@
 
 // export default App;
 
+// import React from "react";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import MyForm from "./MyExamCode/MyForm";
+// import TodoList from "./pages/ToDoList";
+
+// const App = () => {
+//   return (
+//     <Router>
+//       <Routes>
+//         <Route path="/" element={<MyForm />} />
+//         <Route path="/todo" element={<TodoList />} />
+//       </Routes>
+//     </Router>
+//   );
+// };
+
+// export default App;
+
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import MyForm from "./MyExamCode/MyForm";
-import TodoList from "./pages/ToDoList";
+import Clock from "./Clock/Clock";
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<MyForm />} />
-        <Route path="/todo" element={<TodoList />} />
-      </Routes>
-    </Router>
+    <>
+      <Clock />
+    </>
   );
 };
 
