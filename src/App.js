@@ -41,13 +41,27 @@
 
 // export default App;
 
+// import React from "react";
+// import Clock from "./Clock/Clock";
+
+// const App = () => {
+//   return (
+//     <>
+//       <Clock />
+//     </>
+//   );
+// };
+
+// export default App;
+
 import React from "react";
-import Clock from "./Clock/Clock";
+import "./App.css";
+import Calculater from "./MyCalculater/Calculater";
 
 const App = () => {
   return (
     <>
-      <Clock />
+      <Calculater />
     </>
   );
 };
