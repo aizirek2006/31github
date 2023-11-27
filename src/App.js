@@ -54,14 +54,30 @@
 
 // export default App;
 
+// import React from "react";
+// import "./App.css"; 
+// import Calculater from "./MyCalculater/Calculater";
+
+// const App = () => {
+//   return (
+//     <>
+//       <Calculater />
+//     </>
+//   );
+// };
+
+// export default App;
+
+
 import React from "react";
 import "./App.css";
-import Calculater from "./MyCalculater/Calculater";
+import Game from "./Game/Game";
+
 
 const App = () => {
   return (
     <>
-      <Calculater />
+      <Game />
     </>
   );
 };
