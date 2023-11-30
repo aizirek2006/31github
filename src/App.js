@@ -84,53 +84,66 @@
 
 //todo
 
-import React, { useState } from "react";
-import "./App.css";
-import ToDoForm from "./ToDoList/ToDoForm";
-import TodoList from "./ToDoList/TodoList";
+// import React, { useState } from "react";
+// import "./App.css";
+// import ToDoForm from "./ToDoList/ToDoForm";
+// import TodoList from "./ToDoList/TodoList";
+
+// function App() {
+//   const [todos, setTodos] = useState([]);
+
+//   const addTask = (userInput) => {
+//     if (userInput) {
+//       const newItem = {
+//         id: Math.random().toString(36).substr(2, 9),
+//         task: userInput,
+//         complete: false,
+//       };
+//       setTodos([...todos, newItem]);
+//     }
+//   };
+
+//   const removeTask = (id) => {
+//     setTodos([...todos.filter((todo) => todo.id !== id)]);
+//   };
+
+//   const handleToggle = (id) => {
+//     setTodos([
+//       ...todos.map((task) =>
+//         task.id === id ? { ...task, complete: !task.complete } : { ...task }
+//       ),
+//     ]);
+//   };
+
+//   return (
+//     <div className="App">
+//       <header>
+//         <h1>Список задач: {todos.length}</h1>
+//       </header>
+//       <ToDoForm addTask={addTask} />
+//       {todos.map((todo) => {
+//         return (
+//           <TodoList
+//             todo={todo}
+//             key={todo.id}
+//             toggleTask={handleToggle}
+//             removeTask={removeTask}
+//           />
+//         );
+//       })}
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import React from "react";
+import Game from "./components/Gamee";
 
 function App() {
-  const [todos, setTodos] = useState([]);
-
-  const addTask = (userInput) => {
-    if (userInput) {
-      const newItem = {
-        id: Math.random().toString(36).substr(2, 9),
-        task: userInput,
-        complete: false,
-      };
-      setTodos([...todos, newItem]);
-    }
-  };
-
-  const removeTask = (id) => {
-    setTodos([...todos.filter((todo) => todo.id !== id)]);
-  };
-
-  const handleToggle = (id) => {
-    setTodos([
-      ...todos.map((task) =>
-        task.id === id ? { ...task, complete: !task.complete } : { ...task }
-      ),
-    ]);
-  };
-
   return (
-    <div className="App">
-      <header>
-        <h1>Список задач: {todos.length}</h1>
-      </header>
-      <ToDoForm addTask={addTask} />
-      {todos.map((todo) => {
-        return (
-          <TodoList
-            todo={todo}
-            key={todo.id}
-            toggleTask={handleToggle}
-            removeTask={removeTask}
-          />
-        );
-      })}
+    <div>
+      <Game />
     </div>
   );
 }
