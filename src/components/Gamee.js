@@ -62,6 +62,7 @@ const Game = () => {
           default:
             break;
         }
+        
 
         newSnake.unshift(head);
 
