@@ -137,13 +137,29 @@
 
 // export default App;
 
+// import React from "react";
+// import Game from "./components/Gamee";
+
+// function App() {
+//   return (
+//     <div>
+//       <Game />
+//     </div>
+//   );
+// }
+
+// export default App;
+
 import React from "react";
-import Game from "./components/Gamee";
+import "./App.css";
+import TodoApp from "./ListTodo/TodoApp";
+import List from "./ListTodo/List";
 
 function App() {
   return (
-    <div>
-      <Game />
+    <div className="todo-app">
+      <TodoApp />
+      <List />
     </div>
   );
 }
