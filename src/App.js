@@ -150,17 +150,43 @@
 
 // export default App;
 
-import React from "react";
-import "./App.css";
-import TodoApp from "./ListTodo/TodoApp";
-import List from "./ListTodo/List";
+// import React from "react";
+// import "./App.css";
+// import TodoApp from "./ListTodo/TodoApp";
+// import List from "./ListTodo/List";
 
+// function App() {
+//   return (
+//     <div className="todo-app">
+//       <TodoApp />
+//       <List />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import { useState } from "react";
+import "./App.css";
+import Basket from "./componentss/basket/Basket";
+import Header from "./componentss/header/Header";
+import Meals from "./componentss/meals/Meals";
+import Summary from "./componentss/summary/Summary";
+import { BasketProvider } from "./store/BasketContext";
 function App() {
+  const [isModal, setIsModal] = useState(false);
+  const isModalHandler = () => {
+    setIsModal((prevState) => !prevState);
+  };
   return (
-    <div className="todo-app">
-      <TodoApp />
-      <List />
-    </div>
+    <BasketProvider>
+      <div className="App">
+        <Header isModalHandler={isModalHandler} />
+        <Summary />
+        <Meals />
+        {isModal && <Basket isModalHandler={isModalHandler} />}
+      </div>
+    </BasketProvider>
   );
 }
 
