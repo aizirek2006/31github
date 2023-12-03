@@ -166,27 +166,40 @@
 
 // export default App;
 
-import { useState } from "react";
-import "./App.css";
-import Basket from "./componentss/basket/Basket";
-import Header from "./componentss/header/Header";
-import Meals from "./componentss/meals/Meals";
-import Summary from "./componentss/summary/Summary";
-import { BasketProvider } from "./store/BasketContext";
+// import { useState } from "react";
+// import "./App.css";
+// import Basket from "./componentss/basket/Basket";
+// import Header from "./componentss/header/Header";
+// import Meals from "./componentss/meals/Meals";
+// import Summary from "./componentss/summary/Summary";
+// import { BasketProvider } from "./store/BasketContext";
+// function App() {
+//   const [isModal, setIsModal] = useState(false);
+//   const isModalHandler = () => {
+//     setIsModal((prevState) => !prevState);
+//   };
+//   return (
+//     <BasketProvider>
+//       <div className="App">
+//         <Header isModalHandler={isModalHandler} />
+//         <Summary />
+//         <Meals />
+//         {isModal && <Basket isModalHandler={isModalHandler} />}
+//       </div>
+//     </BasketProvider>
+//   );
+// }
+
+// export default App;
+
+import React from "react";
+import Saat from "./MyApp/Saat";
+
 function App() {
-  const [isModal, setIsModal] = useState(false);
-  const isModalHandler = () => {
-    setIsModal((prevState) => !prevState);
-  };
   return (
-    <BasketProvider>
-      <div className="App">
-        <Header isModalHandler={isModalHandler} />
-        <Summary />
-        <Meals />
-        {isModal && <Basket isModalHandler={isModalHandler} />}
-      </div>
-    </BasketProvider>
+    <div>
+      <Saat />
+    </div>
   );
 }
 
