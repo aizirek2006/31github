@@ -192,15 +192,15 @@
 
 // export default App;
 
-import React from "react";
-import Saat from "./MyApp/Saat";
+// import React from "react";
+// import Saat from "./MyApp/Saat";
 
-function App() {
-  return (
-    <div>
-      <Saat />
-    </div>
-  );
-}
+// function App() {
+//   return (
+//     <div>
+//       <Saat />
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;

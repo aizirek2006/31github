@@ -413,7 +413,10 @@ h1 {
   color: #fff;
 } */
 
-.App {
+
+
+
+/* .App {
   text-align: center;
   margin: 0;
 }
@@ -451,4 +454,6 @@ h1 {
   to {
     transform: rotate(360deg);
   }
-}
+} */
+
+
