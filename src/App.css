@@ -413,9 +413,6 @@ h1 {
   color: #fff;
 } */
 
-
-
-
 /* .App {
   text-align: center;
   margin: 0;
@@ -456,5 +453,51 @@ h1 {
   }
 } */
 
+body {
+  background: url("https://cdn.kimkim.com/files/a/images/0a7156fa72386934fa0c5dfd094b4da3ec25ddef/big-57e3e283798da6dbaac42802e9cc49c6.jpg")
+    center / cover no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
 
+h1 {
+  font-size: 100px;
+}
 
+.App {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.Snowflake {
+  display: inline-block;
+  width: 0.1%;
+  color: #fffafa;
+  opacity: 0;
+  font-size: 120px;
+  margin: 0;
+  padding: 0;
+  animation: fall 16s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 0;
+  }
+  3% {
+    opacity: 0.9;
+  }
+
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(0, 97vh);
+    opacity: 0;
+  }
+}
