@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:600");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.greeting_card {
+  width: 300px;
+  height: 450px;
+  background-color: bg;
+  color: white;
+  position: relative;
+  margin: 150px auto;
+  box-shadow: 4px 7px 18px -2px rgba(0, 0, 0, 0.75);
+  .front {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: bg;
+    transition: all 1s ease-in-out;
+    transform-origin: center left;
+    transform: perspective(700) rotateY(0);
+    z-index: 2;
+    border: 10px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform-style: preserve-3d;
+    .textWrapper {
+      font-family: "Oswald", sans-serif;
+      background-color: rgba(17, 20, 38, 0.5);
+      width: 100%;
+      z-index: 1;
+      position: relative;
+      top: -20px;
+      opacity: 1;
+      overflow: hidden;
+      transition: all 0.5s;
+      transition-timing-function: cubic-bezier(0, 0.15, 1, -2.7);
+      h1 {
+        font-size: 80px;
+        margin: 0;
+      }
+      h2 {
+        font-size: 20px;
+        margin: 0;
+      }
+    }
+    .firework {
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      border: 5px dotted red;
+      border-radius: 100%;
+      top: 40px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: firework 1.5s ease-in-out infinite;
+      transition-timing-function: cubic-bezier(0, 0.15, 1, -2.7);
+      .circle {
+        width: 90%;
+        height: 90%;
+        border-radius: 100%;
+        border: 5px dotted green;
+        position: absolute;
+      }
+      .circle2 {
+        width: 70%;
+        height: 70%;
+        border-radius: 100%;
+        border-color: yellow;
+      }
+      .circle3 {
+        width: 50%;
+        height: 50%;
+        border-radius: 100%;
+        border-color: red;
+      }
+      .circle4 {
+        width: 30%;
+        height: 30%;
+        border-radius: 100%;
+        border-color: green;
+      }
+      .circle5 {
+        width: 15%;
+        height: 15%;
+        border-radius: 100%;
+        border-color: red;
+      }
+    }
+    .firework2 {
+      width: 110px;
+      height: 110px;
+      left: 140px;
+      top: 100px;
+      animation-delay: 1s;
+    }
+    .firework3 {
+      width: 80px;
+      height: 80px;
+      left: 30px;
+      top: 180px;
+      animation-delay: 0.2s;
+    }
+    .firework4 {
+      width: 120px;
+      height: 120px;
+      left: 100px;
+      top: 180px;
+      animation-delay: 0.8s;
+    }
+  }
+  .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 1s ease-in-out;
+    transform: perspective(700) rotateY(0);
+    transform-origin: center left;
+  }
+  .content {
+    width: 100%;
+    height: 100%;
+    background-color: bg;
+    color: white;
+    position: absolute;
+    text-align: center;
+    border: 10px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px 40px;
+      font-family: "Oswald", sans-serif;
+      z-index: 1;
+    }
+    .dot4 {
+      top: 300px;
+      left: 100px;
+    }
+    .dot8 {
+      left: 240px;
+    }
+    .dot9 {
+      top: 100px;
+      left: 90px;
+      background-color: white;
+    }
+    .dot10 {
+      top: 400px;
+      left: 230px;
+      background-color: white;
+    }
+  }
+}
+
+.greeting_card:hover .front {
+  transform: perspective(700) rotateY(-160deg);
+  .textWrapper {
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+  }
+}
+.greeting_card:hover .back {
+  transform: perspective(700) rotateY(-160deg);
+  box-shadow: 5px 0px 20px rgba(0, 0, 0, 1);
+}
+
+@keyframes firework {
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes dots {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.greeting_card .front,
+.content {
+  .dots {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    transition: all 2.7s ease-in-out;
+    box-shadow: 0 0 15px yellow;
+    &:nth-child(even) {
+      animation: dots 3s ease-in-out infinite;
+    }
+    &:nth-child(odd) {
+      animation: dots 2s ease-in-out infinite;
+      animation-delay: 0.2s;
+    }
+  }
+  .dot2 {
+    top: 50px;
+    left: 200px;
+    background-color: red;
+  }
+  .dot3 {
+    top: 350px;
+    left: 200px;
+    background-color: purple;
+  }
+  .dot4 {
+    top: 320px;
+    left: 150px;
+    background-color: yellow;
+  }
+  .dot5 {
+    top: 350px;
+    left: 10px;
+    background-color: red;
+  }
+  .dot6 {
+    top: 390px;
+    left: 100px;
+    background-color: green;
+  }
+  .dot7 {
+    top: 150px;
+    left: 10px;
+    background-color: yellow;
+  }
+  .dot8 {
+    top: 200px;
+    left: 250px;
+    background-color: red;
+  }
+}
