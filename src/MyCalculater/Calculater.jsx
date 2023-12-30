@@ -13,7 +13,7 @@ export default function Botons() {
 
   const evalueExpresion = () => {
     try {
-      const result = eval(value);
+      const result = (value);
       setValue(result.toString());
     } catch (error) {
       console.error(`error: ${error}`);
